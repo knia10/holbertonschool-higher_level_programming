@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-if number < 0:
-    mod = number % (-10)
-else:
+if number > 0:
     mod = number % 10
+else:
+    mod = number % (-10)
 
 if mod > 5:
     print('Last digit of {} is {} and is greater than 5'

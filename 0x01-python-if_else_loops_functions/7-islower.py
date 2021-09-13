@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-def islower(s):
-    return(ord('a') <= ord(s) <= ord('z'))
+def islower(c):
+    return(ord('a') <= ord(c) <= ord('z'))

@@ -4,13 +4,13 @@
 
 class Rectangle:
     def __init__(self, width=0, height=0):
-        self._width = width
-        self._height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
         '''Getter'''
-        return self._width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -19,12 +19,12 @@ class Rectangle:
             raise TypeError('width must be an integer')
         elif value < 0:
             raise ValueError('width must be >= 0')
-        self._width = value
+        self.__width = value
 
     @property
     def height(self):
         '''Getter'''
-        return self._height
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -33,20 +33,20 @@ class Rectangle:
             raise TypeError('width must be an integer')
         elif value < 0:
             raise ValueError('width must be >= 0')
-        self._height = value
+        self.__height = value
 
     def area(self):
         '''returns the rectangle area'''
-        return (self._height * self._width)
+        return (self.__height * self.__width)
 
     def perimeter(self):
         'returns the rectangle perimeter'
-        if self._height == 0 or self._width == 0:
+        if self.__height == 0 or self.__width == 0:
             return 0
-        return (self._height * 2) + (self._width * 2)
+        return (self.__height * 2) + (self.__width * 2)
 
     def __str__(self):
         'print the rectangle with the character #'
-        if self._height == 0 or self._width == 0:
+        if self.__height == 0 or self.__width == 0:
             return 0
-        return ('\n'.join(['#'*self._width for r in range(self._height)]))
+        return ('\n'.join(['#'*self.__width for r in range(self.__height)]))

@@ -3,9 +3,10 @@
 
 
 class Rectangle:
+    '''Defines a rectangle'''
     def __init__(self, width=0, height=0):
-        self._width = width
-        self._height = height
+        self.height = height
+        self.width = width
 
     @property
     def width(self):

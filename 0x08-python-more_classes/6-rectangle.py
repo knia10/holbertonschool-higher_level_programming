@@ -4,10 +4,11 @@
 
 class Rectangle:
     'Defines a rectangle'
-
+    number_of_instances = 0
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -37,6 +38,7 @@ class Rectangle:
             raise ValueError('height must be >= 0')
         self.__height = value
 
+class number_of_instances:
     def area(self):
         '''returns the rectangle area'''
         return (self.__height * self.__width)
@@ -57,6 +59,7 @@ class Rectangle:
         'representation of rectangle to recreate a new instance'
         return 'Rectangle({:d}, {:d})'.format(self.width, self.height)
 
-    #def __del__(self):
-    #  ''' instance of Rectangle is deleted'''
-    # print('Bye rectangle...')
+    def __del__(self):
+        ''' instance of Rectangle is deleted'''
+        print('Bye rectangle...')
+        Rectangle.number_of_instances -=1

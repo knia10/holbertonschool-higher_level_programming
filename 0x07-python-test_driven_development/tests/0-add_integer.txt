@@ -1,0 +1,48 @@
+# testing whith python3 -m doctest -v ./tests/0-add_integer.txt
+
+import method to test:
+>>> add_integer = __import__('0-add_integer').add_integer
+
+RESULT SUCCESSFUL CASES:
+
+Integers and floats positives and negatives:
+    >>> print(add_integer(1, 2))
+    3
+    >>> print(add_integer(100, -2))
+    98
+    >>> print(add_integer(100.3, -2))
+    98
+
+Use default b=98 value:
+    >>> print(add_integer(2))
+    100
+
+RESULT FAILED CASES:
+
+Data that is not integer and floats:
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+    >>> add_integer(9, [100,2,8])
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Whith None args:
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+    >>> add_integer(None, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Whith more of two numbers:
+    >>> add_integer(80, -2, 8)
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given

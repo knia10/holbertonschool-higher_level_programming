@@ -48,9 +48,14 @@ Whith more of two numbers:
     TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
 
-
 Test for Float infinity:
     >>> add_integer(float('inf'))
     Traceback (most recent call last):
     ...
     OverflowError: cannot convert float infinity to integer
+
+Convert float to NaN:
+    >>> add_integer(float(NaN))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer

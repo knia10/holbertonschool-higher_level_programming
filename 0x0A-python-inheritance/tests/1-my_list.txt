@@ -1,0 +1,39 @@
+# testing whith python3 -m doctest -v ./tests/0-add_integer.txt
+
+import method to test:
+>>> MyList = __import__('1-my_list').MyList
+
+RESULT SUCCESSFUL CASES:
+
+Integers numbers:
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+
+Whith no elements:
+    >>> any = Mylist()
+    >>> any.append()
+    >>> print(any)
+    []
+    >>> any.print_sorted()
+    []
+    >>> print(any)
+
+whith few:
+    >>> few = Mylist()
+    >>> few.append(1024)
+    >>> print(few)
+    [1024]
+    >>> few.print_sorted()
+    [1024]
+    >>> print(few)

@@ -14,4 +14,4 @@ class MyList(list):
         '''
         method that prints the list, but ascending sort
         '''
-        print(sorted(self))# sorted retorna newlist
+        print(sorted(self))  # sorted retorna newlist

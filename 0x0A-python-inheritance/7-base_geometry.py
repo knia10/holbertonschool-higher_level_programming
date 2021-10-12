@@ -21,9 +21,9 @@ class BaseGeometry:
         '''
         Method that validates value
         '''
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError('{:s} must be an integer'.format(name))
-        if type(value) is bool:
+        if isinstance(value, bool):
             raise TypeError('{:s} must be an integer'.format(name))
         if value <= 0:
             raise ValueError('{:s} must be greater than 0'.format(name))

@@ -1,4 +1,4 @@
-# testing whith python3 -m doctest -v ./tests/0-add_integer.txt
+# testing whith python3 -m doctest -v ./tests/1-my_list.txt
 
 import method to test:
 >>> MyList = __import__('1-my_list').MyList
@@ -37,3 +37,21 @@ whith few:
     >>> few.print_sorted()
     [1024]
     >>> print(few)
+
+with isinstance, issubclase, and type
+    >>> isinstance(MyList, object)
+    True
+
+    >>> isinstance(MyList, list)
+    False
+
+    >>> issubclase(MyList, list)
+    True
+
+    >>> type(MyList())
+    <class '1-my_list.MyList'>
+
+    >>> 'print_sorted' in dir(MyList)
+    True
+
+RESULT FAILED CASES:

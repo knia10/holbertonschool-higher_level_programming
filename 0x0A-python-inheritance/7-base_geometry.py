@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Module base_geometry
+Module 7-base_geometry
 Has Public instance method with exception
 '''
 
@@ -22,6 +22,8 @@ class BaseGeometry:
         Method that validates value
         '''
         if type(value) is not int:
+            raise TypeError('{:s} must be an integer'.format(name))
+        if type(value) is bool:
             raise TypeError('{:s} must be an integer'.format(name))
         if value <= 0:
             raise ValueError('{:s} must be greater than 0'.format(name))

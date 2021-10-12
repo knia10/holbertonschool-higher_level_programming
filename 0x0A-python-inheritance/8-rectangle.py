@@ -8,14 +8,16 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-
+    '''
+    Inherits fron BaseGeometry
+    '''
     def __init__(self, width, height):
         '''
         width and height must be positive integers,
         validated by integer_validator
         '''
         # super() trae todo del padre
-        super().integer_validator('width', width)
+        self.integer_validator('width', width)
         self.__width = width
-        super().integer_validator('height', width)
+        self.integer_validator('height', width)
         self.__height = height

@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Module my_list
+Module 1-my_list
 Has a class MyList that inherits from list
 '''
 
@@ -14,4 +14,4 @@ class MyList(list):
         '''
         method that prints the list, but ascending sort
         '''
-        print(sorted(self))  # sorted retorna newlist
+        print(sorted(self))

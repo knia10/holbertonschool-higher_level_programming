@@ -19,6 +19,17 @@ Integers numbers:
     >>> print(my_list)
     [1, 4, 2, 3, 5]
 
+    >>> otherlist = MyList()
+    >>> otherlist.append(32)
+    >>> otherlist.append(-64)
+    >>> otherlist.append(1024)
+    >>> print(otherlist)
+    [32, -64, 1024]
+    >>>otherlist.print_sorted()
+    [-64, 32, 1024]
+    >>> print(otherlist)
+    [32, -64, 1024]
+
 
 Whith no elements:
     >>> any = Mylist()
@@ -38,20 +49,6 @@ whith few:
     [1024]
     >>> print(few)
 
-with isinstance, issubclase, and type
-    >>> isinstance(MyList, object)
-    True
 
-    >>> isinstance(MyList, list)
-    False
-
-    >>> issubclase(MyList, list)
-    True
-
-    >>> type(MyList())
-    <class '1-my_list.MyList'>
-
-    >>> 'print_sorted' in dir(MyList)
-    True
 
 RESULT FAILED CASES:

@@ -1,4 +1,4 @@
-# testing whith python3 -m doctest -v ./tests/1-my_list.txt
+# testing whith python3 -m doctest -v ./tests/7-base_geometry.txt
 
 import method to test:
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
@@ -43,16 +43,3 @@ Value less or equal to 0:
     Traceback (most recent call last):
     ...
     ValueError: my_int must be greater than 0
-
-Invalid Args:
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("my_int")
-    Traceback (most recent call last):
-    ...
-    TypeError: integer_validator() missing 1 required positional argument: 'value'
-
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator()
-    Traceback (most recent call last):
-    ...
-    TypeError: integer_validator() missing 1 required positional argument: 'value'

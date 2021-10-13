@@ -6,15 +6,17 @@ and then save them to a file
 import save_to_json_file from 5-save_to_json_file.py
 import load_from_json_file from 6-load_from_json_file.py
 '''
+
+
 from sys import argv
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-# l_fname = 'add_item.json'
+l_fname = 'add_item.json'
 try:
-    file_found = load_from_json_file('add_item.json')
+    file_found = load_from_json_file(l_fname)
 except FileNotFoundError:
-        file_found = []
+    file_found = []
 for i in argv[1:]:
     file_found.append(i)
-save_to_json_file(file_found, 'add_item.json')
+save_to_json_file(file_found, l_fname)

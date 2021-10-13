@@ -5,41 +5,42 @@ import method to test:
 
 RESULT SUCCESSFUL CASES:
 
-Positive Numbers:
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("my_int", 12)
-    >>> bg.integer_validator("width", 89)
+Import the add_integer module:
 
-RESULT FAILED CASES:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-with other values:
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("my_int", None)
-    Traceback (most recent call last):
-    ...
-    TypeError: my_int must be an integer
+>>> BaseGeometry.integer_validator("holbies", "ayuda")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
 
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("my_int", "testing")
-    Traceback (most recent call last):
-    ...
-    TypeError: my_int must be an integer
+-------------
+Requirements
+-------------
 
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("my_int", [10,4,9])
-    Traceback (most recent call last):
-    ...
-    TypeError: my_int must be an integer
+README Create and not empty:
 
-Value less or equal to 0:
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("my_int", 0)
-    Traceback (most recent call last):
-    ...
-    ValueError: my_int must be greater than 0
+>>> import os
+>>> os.path.exists("README.md")
+True
 
-    >>> bg = BaseGeometry()
-    >>> bg.integer_validator("my_int", -1024)
-    Traceback (most recent call last):
-    ...
-    ValueError: my_int must be greater than 0
+Module documentation:
+
+>>> len(__import__('7-base_geometry').__doc__) >= 5
+True
+
+Function documentation:
+
+>>> len(__import__('7-base_geometry').BaseGeometry.__doc__) >= 3
+True
+
+Shebang at the beginning of the file:
+
+>>> import os
+>>> os.popen('head -1 7-base_geometry.py').read()
+'#!/usr/bin/python3\n'
+
+pycodestyle correct:
+
+>>> os.popen('pycodestyle 7-base_geometry.py').read()
+''

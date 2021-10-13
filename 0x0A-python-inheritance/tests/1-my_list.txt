@@ -23,21 +23,6 @@ Integers numbers:
     [-64, 32, 1024]
 
 
-Whith no elements:
-    >>> any = Mylist()
-    >>> any.append()
-    >>> any.print_sorted()
-    []
-
-whith few:
-    >>> few = Mylist()
-    >>> few.append(1024)
-    >>> print(few)
-    [1024]
-    >>> few.print_sorted()
-    [1024]
-    >>> print(few)
-
 with only negatives numbers
     >>> my_list = MyList()
     >>> my_list.append(-1)
@@ -49,13 +34,6 @@ with only negatives numbers
     [-5, -4, -3, -2, -1]
 
 
-    >>> my_list.append(-1)
-    >>> my_list.append(-4)
-    >>> my_list.append(-2)
-    >>> my_list.append(-3)
-    >>> my_list.append(-5)
-    >>> my_list.print_sorted()
-    [-5, -4, -3, -2, -1]
 
 Requirements
 

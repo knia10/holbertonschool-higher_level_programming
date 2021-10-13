@@ -3,7 +3,6 @@
 Module 6-load_from_json_file
 Has a function that creates an Object from a “JSON file”
 '''
-
 import json
 
 

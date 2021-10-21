@@ -48,7 +48,9 @@ class Square(Rectangle):
         self.__height = value
 
     def update(self, *args, **kwargs):
-
+        '''
+        that assigns an argument to each attribute:
+        '''
         if len(args) >= 1:
             for iter, value in enumerate(args):
                 if iter == 0:

@@ -6,6 +6,7 @@ class constructor __init__(self, id=None)
 '''
 import json
 
+
 class Base:
     '''
     class with class attribute and

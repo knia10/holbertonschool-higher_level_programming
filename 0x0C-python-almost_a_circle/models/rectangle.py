@@ -2,11 +2,12 @@
 '''
 Module rectangle
 Has a class Rectangle that inherits from Base
-Rectangle contains Private instance attributes, 
+Rectangle contains Private instance attributes,
 each with its own public getter and setter
 '''
 
 from models.base import Base
+
 
 class Rectangle(Base):
     '''
@@ -16,9 +17,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         '''
         Class constructor
-        Call the super class with id - this super call with use the logic of the __init__ of the Base class
+        Call the super class with id - this super call with
+        use the logic of the __init__ of the Base class
         Assign each argument width, height, x and y to the right attribute
-
+        validation of all setter methods and instantiation
         '''
         super().__init__(id)
         self.width = width
@@ -55,7 +57,6 @@ class Rectangle(Base):
             raise ValueError('width must be > 0')
         self.__width = input
 
-
     @height.setter
     def height(self, input):
         '''setter'''
@@ -82,3 +83,24 @@ class Rectangle(Base):
         if input < 0:
             raise ValueError('y must be >= 0')
         self.__y = input
+
+    def area(self):
+        '''
+        public method that returns area value of the Rectangle instance.
+        '''
+        return self.__width * self.__height
+
+    def display(self):
+        '''
+        public method prints in stdout the Rectangle instance with
+        the character #
+        '''
+        print('\n' * self.__y +
+              '\n'.join([' ' * self.__x + '#' * self.__width for r in range(self.__height)]))
+
+    def __str__(self) -> str:
+        return '[{:s}] ({:d}) {:d}/{:d} - {:d}/{:d}'.format(
+            self.__class__.__name__, self.id,
+            self.__x, self.__y,
+            self.__width, self.__height
+        )

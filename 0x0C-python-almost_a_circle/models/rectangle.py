@@ -96,7 +96,8 @@ class Rectangle(Base):
         the character #
         '''
         print('\n' * self.__y +
-              '\n'.join([' ' * self.__x + '#' * self.__width for r in range(self.__height)]))
+              '\n'.join([' ' * self.__x + '#' * self.__width
+                         for r in range(self.__height)]))
 
     def __str__(self) -> str:
         return '[{:s}] ({:d}) {:d}/{:d} - {:d}/{:d}'.format(

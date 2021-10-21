@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Module 8-rectangle
+Module 9-rectangle
 Extend to BaseGeometry
 with subclass Rectangle with privates attributes width, height
 '''

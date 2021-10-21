@@ -13,14 +13,13 @@ def pascal_triangle(n):
     '''
     if n <= 0:
         return []
-    l_int = [[] for i in range(n)]
+    #l_int = [[] for i in range(n)]
     for i in range(n):
         for j in range(i+1):
             if(j < i):
                 if (j == 0):
-                    l_int.append(1)
+                    pascal_triangle.append(1)
                 else:
-                    l_int[i].append(l_int[i-1][j]+[i-1][j-1])
+                    pascal_triangle[i].append(pascal_triangle[i-1][j]+[i-1][j-1])
             elif(j == i):
-                l_int[i].append(1)
-    return l_int
+                pascal_triangle[i].append(1)

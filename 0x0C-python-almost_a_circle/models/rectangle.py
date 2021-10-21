@@ -105,3 +105,17 @@ class Rectangle(Base):
             self.__x, self.__y,
             self.__width, self.__height
         )
+
+    def update(self, *args):
+        if len(args) >= 1:
+            for iter, value in enumerate(args):
+                if iter == 0:
+                    self.id = value
+                elif iter == 1:
+                    self.__width = value
+                elif iter == 2:
+                    self.__height = value
+                elif iter == 3:
+                    self.__x = value
+                elif iter == 4:
+                    self.__y = value

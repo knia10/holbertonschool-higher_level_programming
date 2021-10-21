@@ -19,3 +19,15 @@ class Square(Rectangle):
         create new atribute size.
         '''
         super().__init__(size, size, x, y, id)
+        self.size = size
+
+    def __str__(self) -> str:
+        '''
+        method so that it
+        returns [Square] (<id>) <x>/<y> - <size>
+        '''
+        return '[{:s}] ({:d}) {:d}/{:d} - {:d}'.format(
+            self.__class__.__name__, self.id,
+            self.x, self.y,
+            self.size
+        )

@@ -100,6 +100,10 @@ class Rectangle(Base):
                          for r in range(self.__height)]))
 
     def __str__(self) -> str:
+        '''
+        method so that it
+        returns [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        '''
         return '[{:s}] ({:d}) {:d}/{:d} - {:d}/{:d}'.format(
             self.__class__.__name__, self.id,
             self.__x, self.__y,
@@ -107,6 +111,9 @@ class Rectangle(Base):
         )
 
     def update(self, *args):
+        '''
+        that assigns an argument to each attribute:
+        '''
         if len(args) >= 1:
             for iter, value in enumerate(args):
                 if iter == 0:

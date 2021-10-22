@@ -63,11 +63,11 @@ class Base:
         '''
         returns an instance with all attributes already set
         '''
-        if cls.__name__ == 'Reactangle':
-            dummy = cls(1, 1)
+        if cls.__name__ == 'Rectangle':
+            dummy = cls(8, 9)
             dummy.update(**dictionary)
             return dummy
         if cls.__name__ == 'Square':
-            dummy = cls(1)
+            dummy = cls(2)
             dummy.update(**dictionary)
             return dummy

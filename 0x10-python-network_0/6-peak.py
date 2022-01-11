@@ -15,5 +15,5 @@ def find_peak(list_of_integers):
         return max(list_of_integers)
 
     if len(list_of_integers) > 0:
-        order = sorted(list_of_integers, reverse=True)
-        return order[0]
+        list_of_integers.sort(reverse=True)
+        return list_of_integers[0]

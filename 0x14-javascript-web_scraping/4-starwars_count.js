@@ -10,15 +10,15 @@ request(url, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
-    let result = JSON.parse(body).results;
-    for (let i in result) {
-      let character = result[i].characters;
-      for (let j in character) {
+    const result = JSON.parse(body).results;
+    for (const i in result) {
+      const character = result[i].characters;
+      for (const j in character) {
         if (character[j].includes('/18/')) {
-          countPerson +=1;
+          countPerson += 1;
         }
       }
     }
-    console.log(countPerson)
+    console.log(countPerson);
   }
 });

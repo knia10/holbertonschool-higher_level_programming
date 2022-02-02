@@ -14,7 +14,7 @@ request(url, function (error, response, body) {
     for (let i in result) {
       let character = result[i].characters;
       for (let j in character) {
-        if (character[j].includes('18')) {
+        if (character[j].includes('/18/')) {
           countPerson +=1;
         }
       }

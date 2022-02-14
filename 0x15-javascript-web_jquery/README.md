@@ -33,6 +33,6 @@
 </head>
 ```
 
-<img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/305/1f1ihd.jpg" width="800" height= "500"/>
+<img src="https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/305/1f1ihd.jpg" width="800" height= "300"/>
 
 By Estefania Ruiz 🦌 from Holberton School 🪐
